@@ -1,11 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import "./routers/AppRouter";
+import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Programy-Lekowe</header>
+      <AppRouter />
     </div>
   );
 }
