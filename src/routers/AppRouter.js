@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
 import { Button } from "reactstrap";
 import Dashboard from "../components/Dashboard";
 import Diagnose from "../components/Diagnose";
-
+import Therapy from "../components/Therapy";
+import Consum from "../components/consumer";
 const Header = () => (
   <header className="App-header">
     <h1>
@@ -11,7 +12,7 @@ const Header = () => (
       <NavLink to="/" activeClassName="is-active" exact={true}>
         <Button color="primary">Strona Główna</Button>
       </NavLink>
-      <NavLink to="/diagnose" activeClassName="is-active">
+      <NavLink to="/therapy" activeClassName="is-active">
         <Button color="primary">Terapia</Button>
       </NavLink>
       <NavLink to="/edit" activeClassName="is-active">
@@ -30,7 +31,8 @@ const AppRouter = () => (
       <Header />
       <Switch>
         <Route path="/" component={Dashboard} exact={true} />
-        <Route path="/diagnose" component={Diagnose} exact={true} />
+        <Route path="/therapy" component={Therapy} />
+        <Route path="/edit" component={Consum} />
       </Switch>
     </div>
   </BrowserRouter>
