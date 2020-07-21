@@ -1,26 +1,158 @@
 [
   {
-    "name": "medicine1",
-    "prop1": "1",
-    "prop2": "0",
-    "prop3": "1"
+    "name": "Erlotynib / gefitynib / afatynib w II linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": true,
+    "zaawansowanie": ["III", "IV"],
+    "zmiany_mierzalne": true,
+    "brak_przerzutow_OUN": true,
+    "stopien_sprawnosci": [0, 1, 2],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
+    "wykluczenie_przeciwwskazan": true
   },
   {
-    "name": "medicine2",
-    "prop1": "1",
-    "prop2": "1",
-    "prop3": "1"
+    "name": "Erlotynib / gefitynib / afatynib w I linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": true,
+    "zaawansowanie": ["III", "IV"],
+    "zmiany_mierzalne": true,
+    "brak_przerzutow_OUN": true,
+    "stopien_sprawnosci": [0, 1, 2],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": false,
+    "wykluczenie_przeciwwskazan": true
   },
   {
-    "name": "medicine3",
-    "prop1": "0",
-    "prop2": "0",
-    "prop3": "0"
+    "name": "ozymertynib w II linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": true,
+    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
+    "mutacja_T790 w genie EGFR": true,
+    "wykluczenie_przeciwwskazan": true,
+    "stan_sprawnosci": [0, 1, 2]
   },
   {
-    "name": "medicin4",
-    "prop1": "0",
-    "prop2": "0",
-    "prop3": "1"
+    "name": "Kryzotynib w I linii",
+    "rozpozn_hist": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Kryzotynib w II linii",
+    "rozpozn_hist": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": true,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Alektynib w I linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Alektynib w II linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_kryzotynibem": true,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Cerytynib w I linii",
+    "rozpozn_hist": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Cerytynib w II linii",
+    "rozpozn_hist": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_kryzotynibem": false,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Nintedanib w II linii",
+    "rozpozn_hist": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
+    "zaawansowanie": ["III", "IV"],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
+    "stan_sprawnosci": [0, 1, 2]
+  },
+  {
+    "name": "Pembrolizumab w I linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "obecnosc_ekspresji_PD_L1": ">=50%",
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
+    "zaawansowanie": ["IV"],
+    "stan_sprawnosci": [0, 1]
+  },
+  {
+    "name": "Niwolumab  w II linii",
+    "rozpozn_hist": [
+      "rak gruczołowy",
+      "rak wielkokomórkowy",
+      "niedrobnokomórkowy NOS"
+    ],
+    "mutacja_aktywujaca_EFGR": false,
+    "zaawansowanie": ["III", "IV"],
+    "stan_sprawnosci": [0, 1],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
+  },
+  {
+    "name": "Atezolizumab w II linii",
+    "rozpozn_hist": ["rak płasnonabłonkowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
+    "zaawansowanie": ["III", "IV"],
+    "stan_sprawnosci": [0, 1],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
+  },
+  {
+    "name": "test",
+    "rozpozn_hist": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
+    "mutacja_aktywujaca_EFGR": true,
+    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
+    "mutacja_T790 w genie EGFR": true,
+    "wykluczenie_przeciwwskazan": true
   }
 ]

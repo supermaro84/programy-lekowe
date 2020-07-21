@@ -8,24 +8,18 @@ import {
 
 const DiagnoseSelector = (props) => {
   const [medParams, setParams] = useState({
-    param1: "",
-    param2: "",
-    param3: "",
+    rozpozn_hist: undefined,
+    mutacja_aktywujaca_EFGR: undefined,
   });
 
   const changeParams = (e) => {
-    setParams({ ...medParams, [e.target.id]: e.target.innerText });
+    setParams({ ...medParams, [e.target.id]: e.target.value });
   };
   useEffect(() => {
     //Update the document title using the browser API
     props.getParams(medParams);
   });
 
-  const passParams = () => {
-    let parametry = medParams.param1;
-    props.getParams(parametry);
-    console.log(medParams.param1);
-  };
   const getParamValue = (paramName) => {
     console.log(paramName);
     medParams.map((param) => {
@@ -38,40 +32,60 @@ const DiagnoseSelector = (props) => {
     <div>
       <h1>Wybor parametrow</h1>
       <UncontrolledDropdown>
-        <DropdownToggle caret>Parameter 1</DropdownToggle>
+        <DropdownToggle caret>rozpoznanie histologiczne</DropdownToggle>
         <DropdownMenu>
-          <DropdownItem id="param1" onClick={changeParams}>
-            0
+          <DropdownItem
+            id="rozpozn_hist"
+            value="rak gruczołowy"
+            onClick={changeParams}
+          >
+            rak gruczołowy
           </DropdownItem>
-          <DropdownItem id="param1" onClick={changeParams}>
-            1
+          <DropdownItem
+            id="rozpozn_hist"
+            value="rak wielkokomórkowy"
+            onClick={changeParams}
+          >
+            rak wielkokomórkowy
+          </DropdownItem>
+          <DropdownItem
+            id="rozpozn_hist"
+            value="niedrobnokomórkowy NOS"
+            onClick={changeParams}
+          >
+            niedrobnokomórkowy NOS
+          </DropdownItem>
+          <DropdownItem
+            id="rozpozn_hist"
+            value="rak płasnonabłonkowy"
+            onClick={changeParams}
+          >
+            rak płasnonabłonkowy
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
       <UncontrolledDropdown>
-        <DropdownToggle caret>Parameter 2</DropdownToggle>
+        <DropdownToggle caret>Obecność mutacji aktywującej EGFR</DropdownToggle>
         <DropdownMenu>
-          <DropdownItem id="param2" onClick={changeParams}>
-            0
+          <DropdownItem
+            id="mutacja_aktywujaca_EFGR"
+            value="true"
+            onClick={changeParams}
+          >
+            TAK
           </DropdownItem>
-          <DropdownItem id="param2" onClick={changeParams}>
-            1
+          <DropdownItem
+            id="mutacja_aktywujaca_EFGR"
+            value="false"
+            onClick={changeParams}
+          >
+            NIE
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
-      <UncontrolledDropdown>
-        <DropdownToggle caret>Parameter 3</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem id="param3" onClick={changeParams}>
-            0
-          </DropdownItem>
-          <DropdownItem id="param3" onClick={changeParams}>
-            1
-          </DropdownItem>
-        </DropdownMenu>
-      </UncontrolledDropdown>
+
       <h1>
-        {medParams.param1} {medParams.param2} {medParams.param3}
+        {medParams.rozpozn_hist} {medParams.mutacja_aktywujaca_EFGR}
       </h1>
     </div>
   );

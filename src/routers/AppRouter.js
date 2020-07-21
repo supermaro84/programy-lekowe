@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 import { Button } from "reactstrap";
 import Dashboard from "../components/Dashboard";
-import Diagnose from "../components/Diagnose";
 import Therapy from "../components/Therapy";
 import Consum from "../components/consumer";
 const Header = () => (

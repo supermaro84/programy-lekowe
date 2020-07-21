@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Dane from "../dane.json";
 import DiagnoseSelector from "./DiagnoseSelector";
 import Diagnose from "./Diagnose";
 
