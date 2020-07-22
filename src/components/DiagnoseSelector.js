@@ -5,12 +5,19 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+import ParamList from "../parameters.json";
+
+const cloneParamList = Object.assign({}, ParamList);
+const clearParamList = (ParamList) => {
+  Object.keys(ParamList).forEach(function (key) {
+    ParamList[key] = undefined;
+  });
+  return ParamList;
+};
+//console.log(cloneParamList);
 
 const DiagnoseSelector = (props) => {
-  const [medParams, setParams] = useState({
-    rozpozn_hist: undefined,
-    mutacja_aktywujaca_EFGR: undefined,
-  });
+  const [medParams, setParams] = useState(clearParamList(ParamList));
 
   const changeParams = (e) => {
     setParams({ ...medParams, [e.target.id]: e.target.value });
@@ -31,62 +38,28 @@ const DiagnoseSelector = (props) => {
   return (
     <div>
       <h1>Wybor parametrow</h1>
-      <UncontrolledDropdown>
-        <DropdownToggle caret>rozpoznanie histologiczne</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem
-            id="rozpozn_hist"
-            value="rak gruczołowy"
-            onClick={changeParams}
-          >
-            rak gruczołowy
-          </DropdownItem>
-          <DropdownItem
-            id="rozpozn_hist"
-            value="rak wielkokomórkowy"
-            onClick={changeParams}
-          >
-            rak wielkokomórkowy
-          </DropdownItem>
-          <DropdownItem
-            id="rozpozn_hist"
-            value="niedrobnokomórkowy NOS"
-            onClick={changeParams}
-          >
-            niedrobnokomórkowy NOS
-          </DropdownItem>
-          <DropdownItem
-            id="rozpozn_hist"
-            value="rak płasnonabłonkowy"
-            onClick={changeParams}
-          >
-            rak płasnonabłonkowy
-          </DropdownItem>
-        </DropdownMenu>
-      </UncontrolledDropdown>
-      <UncontrolledDropdown>
-        <DropdownToggle caret>Obecność mutacji aktywującej EGFR</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem
-            id="mutacja_aktywujaca_EFGR"
-            value="true"
-            onClick={changeParams}
-          >
-            TAK
-          </DropdownItem>
-          <DropdownItem
-            id="mutacja_aktywujaca_EFGR"
-            value="false"
-            onClick={changeParams}
-          >
-            NIE
-          </DropdownItem>
-        </DropdownMenu>
-      </UncontrolledDropdown>
-
-      <h1>
-        {medParams.rozpozn_hist} {medParams.mutacja_aktywujaca_EFGR}
-      </h1>
+      <div>
+        {Object.entries(cloneParamList).map((param) => {
+          return (
+            <UncontrolledDropdown>
+              <DropdownToggle caret>{param[0]}</DropdownToggle>
+              <DropdownMenu>
+                {param[1].map((el) => {
+                  return (
+                    <DropdownItem
+                      id={param[0]}
+                      value={el}
+                      onClick={changeParams}
+                    >
+                      {el}
+                    </DropdownItem>
+                  );
+                })}
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          );
+        })}
+      </div>
     </div>
   );
 };

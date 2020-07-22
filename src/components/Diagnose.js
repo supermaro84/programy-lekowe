@@ -10,7 +10,6 @@ const Diagnose = (props) => {
   });
   useEffect(() => {
     if (props.newParamList) {
-      console.log(dane);
       setParams(props.newParamList);
       getScores();
     }
@@ -20,27 +19,30 @@ const Diagnose = (props) => {
 
   const getScores = () => {
     const paramsToScore = props.newParamList;
-    // const finf = dane.map((dana) => {
-    //   const finder = dana.rozpozn_hist.find(
-    //     (rak) => rak === paramsToScore.rozpozn_hist
-    //   );
-    //   //const finder = paramsToScore.rozpozn_hist === dana.rozpozn_hist;
-    //   //console.log(paramsToScore.rozpozn_hist, dana.rozpozn_hist)
-    //   console.log(finder);
-    //   return !!finder;
-    // });
-    //dane.pop({ name: "test" });
-    if (!!props.newParamList.rozpozn_hist) {
-      const daneToFilter = dane.filter((dana) => {
-        console.log(dana);
-        const finder = dana.rozpozn_hist.find(
-          (rak) => rak === paramsToScore.rozpozn_hist
-        );
-        console.log(!!finder);
-        return !!finder;
-      });
-      setDane(daneToFilter);
-    }
+
+    const filterRozpoznHist = (item) => {
+      const finder = item.rozpozn_hist.find(
+        (rak) => rak === paramsToScore.rozpozn_hist
+      );
+      return !!finder;
+    };
+
+    const filterEGFR = (item) => {
+      return (
+        item.mutacja_aktywujaca_EFGR === paramsToScore.mutacja_aktywujaca_EFGR
+      );
+    };
+    //first filter
+    let dataFilterRozpoznHist = [];
+    !!props.newParamList.rozpozn_hist
+      ? (dataFilterRozpoznHist = dane.filter(filterRozpoznHist))
+      : (dataFilterRozpoznHist = dane);
+    //second filter
+    let dataFilterEFGR = [];
+    !!props.newParamList.mutacja_aktywujaca_EFGR
+      ? (dataFilterEFGR = dataFilterRozpoznHist.filter(filterEGFR))
+      : (dataFilterEFGR = dataFilterRozpoznHist);
+    setDane(dataFilterEFGR);
 
     //console.log("dane po wczytaniu", daneToFilter);
     // dane.map((dana) => {

@@ -1,0 +1,20 @@
+{
+  "rozpozn_hist": [
+    "rak gruczołowy",
+    "rak wielkokomórkowy",
+    "niedrobnokomórkowy NOS",
+    "rak płasnonabłonkowy"
+  ],
+  "mutacja_aktywujaca_EFGR": ["TAK", "NIE"],
+  "zaawansowanie": ["I", "II", "III", "IV"],
+  "zmiany_mierzalne": ["TAK", "NIE"],
+  "brak_przerzutow_OUN": ["TAK", "NIE"],
+  "stopien_sprawnosci": [0, 1, 2, 3],
+  "wczesniejsze_leczenie_systemowe_zp_raka_pluca": ["TAK", "NIE"],
+  "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": ["TAK", "NIE"],
+  "wykluczenie_przeciwwskazan": ["TAK", "NIE"],
+  "progresja_po_leczeniu_innym_inhibitorem_EFGR": ["TAK", "NIE"],
+  "mutacja_T790 w genie EGFR": ["TAK", "NIE"],
+  "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": ["TAK", "NIE"],
+  "wczesniejsze_leczenie_systemowe_kryzotynibem": ["TAK", "NIE"]
+}

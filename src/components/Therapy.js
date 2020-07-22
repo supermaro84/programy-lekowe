@@ -7,7 +7,6 @@ const Therapy = (props) => {
 
   const getParams = (paramList) => {
     setParamList(paramList);
-    console.log("setting param list");
   };
   return (
     <div>

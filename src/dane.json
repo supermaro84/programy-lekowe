@@ -6,7 +6,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": true,
+    "mutacja_aktywujaca_EFGR": "TAK",
     "zaawansowanie": ["III", "IV"],
     "zmiany_mierzalne": true,
     "brak_przerzutow_OUN": true,
@@ -21,7 +21,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": true,
+    "mutacja_aktywujaca_EFGR": "TAK",
     "zaawansowanie": ["III", "IV"],
     "zmiany_mierzalne": true,
     "brak_przerzutow_OUN": true,
@@ -36,7 +36,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": true,
+    "mutacja_aktywujaca_EFGR": "TAK",
     "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
     "mutacja_T790 w genie EGFR": true,
     "wykluczenie_przeciwwskazan": true,
@@ -45,7 +45,7 @@
   {
     "name": "Kryzotynib w I linii",
     "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
@@ -54,7 +54,7 @@
   {
     "name": "Kryzotynib w II linii",
     "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": true,
@@ -67,7 +67,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
@@ -80,7 +80,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_kryzotynibem": true,
@@ -89,7 +89,7 @@
   {
     "name": "Cerytynib w I linii",
     "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
@@ -98,7 +98,7 @@
   {
     "name": "Cerytynib w II linii",
     "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_kryzotynibem": false,
@@ -107,7 +107,7 @@
   {
     "name": "Nintedanib w II linii",
     "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
@@ -121,7 +121,7 @@
       "niedrobnokomórkowy NOS"
     ],
     "obecnosc_ekspresji_PD_L1": ">=50%",
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["IV"],
     "stan_sprawnosci": [0, 1]
@@ -133,7 +133,7 @@
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "zaawansowanie": ["III", "IV"],
     "stan_sprawnosci": [0, 1],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
@@ -141,18 +141,10 @@
   {
     "name": "Atezolizumab w II linii",
     "rozpozn_hist": ["rak płasnonabłonkowy"],
-    "mutacja_aktywujaca_EFGR": false,
+    "mutacja_aktywujaca_EFGR": "NIE",
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
     "stan_sprawnosci": [0, 1],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
-  },
-  {
-    "name": "test",
-    "rozpozn_hist": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
-    "mutacja_aktywujaca_EFGR": true,
-    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
-    "mutacja_T790 w genie EGFR": true,
-    "wykluczenie_przeciwwskazan": true
   }
 ]
