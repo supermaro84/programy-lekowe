@@ -39,3 +39,9 @@
 .selection_box {
   background-color: aquamarine;
 }
+
+ol {
+  font-size: smaller;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
