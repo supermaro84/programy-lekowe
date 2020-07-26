@@ -43,19 +43,6 @@ const Diagnose = (props) => {
       ? (dataFilterEFGR = dataFilterRozpoznHist.filter(filterEGFR))
       : (dataFilterEFGR = dataFilterRozpoznHist);
     setDane(dataFilterEFGR);
-
-    //console.log("dane po wczytaniu", daneToFilter);
-    // dane.map((dana) => {
-    //   let score = 0;
-    //   if (dana.prop1 === paramsToScore.param1) score++;
-    //   if (dana.prop2 === paramsToScore.param2) score++;
-    //   if (dana.prop3 === paramsToScore.param3) score++;
-    //   dana.score = score;
-    // });
-
-    // dane.sort(function (a, b) {
-    //   return b.score - a.score;
-    // });
   };
 
   return (
@@ -66,15 +53,6 @@ const Diagnose = (props) => {
           return <li>{lek.name}</li>;
         })}
       </ol>
-
-      <div>
-        {Object.keys(params).map((paramName) => (
-          <p key={paramName}>{paramName}</p>
-        ))}
-        {Object.values(params).map((value) => (
-          <p>{value}</p>
-        ))}
-      </div>
     </div>
   );
 };

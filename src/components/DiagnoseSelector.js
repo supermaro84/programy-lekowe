@@ -21,6 +21,7 @@ const DiagnoseSelector = (props) => {
 
   const changeParams = (e) => {
     setParams({ ...medParams, [e.target.id]: e.target.value });
+    document.getElementById("button" + e.target.id).style.color = "red";
   };
   useEffect(() => {
     //Update the document title using the browser API
@@ -37,12 +38,14 @@ const DiagnoseSelector = (props) => {
 
   return (
     <div>
-      <h1>Wybor parametrow</h1>
-      <div>
+      <h1>Wybór parametrów</h1>
+      <div className="selection_box">
         {Object.entries(cloneParamList).map((param) => {
           return (
             <UncontrolledDropdown>
-              <DropdownToggle caret>{param[0]}</DropdownToggle>
+              <DropdownToggle id={"button" + param[0]} caret>
+                {param[0]}
+              </DropdownToggle>
               <DropdownMenu>
                 {param[1].map((el) => {
                   return (
@@ -56,6 +59,7 @@ const DiagnoseSelector = (props) => {
                   );
                 })}
               </DropdownMenu>
+              {medParams[param[0]]}
             </UncontrolledDropdown>
           );
         })}

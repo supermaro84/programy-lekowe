@@ -146,5 +146,13 @@
     "zaawansowanie": ["III", "IV"],
     "stan_sprawnosci": [0, 1],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
+  },
+  {
+    "name": "test",
+    "rozpozn_hist": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
+    "mutacja_aktywujaca_EFGR": "TAK",
+    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
+    "mutacja_T790 w genie EGFR": true,
+    "wykluczenie_przeciwwskazan": true
   }
 ]
