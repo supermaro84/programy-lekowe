@@ -4,6 +4,7 @@ import { Button } from "reactstrap";
 import Dashboard from "../components/Dashboard";
 import Therapy from "../components/Therapy";
 import Consum from "../components/consumer";
+import AddMedicine from "../components/AddMedicine";
 const Header = () => (
   <header className="App-header">
     <h1>
@@ -17,7 +18,7 @@ const Header = () => (
       <NavLink to="/edit" activeClassName="is-active">
         <Button color="primary">Szukaj leku</Button>
       </NavLink>
-      <NavLink to="/help" activeClassName="is-active">
+      <NavLink to="/add_new" activeClassName="is-active">
         <Button color="primary">Dodaj lek</Button>
       </NavLink>
     </h1>
@@ -32,6 +33,7 @@ const AppRouter = () => (
         <Route path="/" component={Dashboard} exact={true} />
         <Route path="/therapy" component={Therapy} />
         <Route path="/edit" component={Consum} />
+        <Route path="/add_new" component={AddMedicine} />
       </Switch>
     </div>
   </BrowserRouter>

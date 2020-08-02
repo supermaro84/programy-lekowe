@@ -1,23 +1,32 @@
-import React, { useState, useEffect } from "react";
-import Dane from "../dane.json";
+import React, { useState, useEffect, Component } from "react";
+//import Dane from "../dane.json";
 import MedicineModal from "../components/MedicineModal";
 
 const Diagnose = (props) => {
-  const dane = Dane;
-  const [daneF, setDane] = useState(Dane);
-  const [params, setParams] = useState({
-    rozpozn_hist: undefined,
-    mutacja_aktywujaca_EFGR: undefined,
-    zaawansowanie: undefined,
-  });
+  //const dane = Dane;
+  const [daneF, setDane] = useState([]);
+
   useEffect(() => {
     if (props.newParamList) {
-      setParams(props.newParamList);
+      //setParams(props.newParamList);
       getScores();
     }
 
     // console.log("ustawilem parametry:", params);
   }, [props.newParamList]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/therapies", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Token 5e46449a2bb90a1d86f07d9d57d15c9cd98c3bdd",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((json) => setDane(json))
+      .catch((error) => console.log(error));
+  }, []);
 
   const getScores = () => {
     const paramsToScore = props.newParamList;
@@ -58,8 +67,8 @@ const Diagnose = (props) => {
     //first filter
     let dataFilterRozpoznHist = [];
     !!props.newParamList.rozpozn_hist
-      ? (dataFilterRozpoznHist = dane.filter(filterRozpoznHist))
-      : (dataFilterRozpoznHist = dane);
+      ? (dataFilterRozpoznHist = daneF.filter(filterRozpoznHist))
+      : (dataFilterRozpoznHist = daneF);
     //second filter
     let dataFilterEFGR = [];
     !!props.newParamList.mutacja_aktywujaca_EFGR
