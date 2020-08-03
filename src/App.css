@@ -41,7 +41,19 @@
 }
 
 ol {
+  width: 400pt;
+  padding: 1px;
   font-size: smaller;
   display: inline-block;
   overflow-wrap: break-word;
+}
+.MedModal {
+  background-color: black;
+  padding: 35px;
+  max-width: fit-content;
+  margin: auto;
+}
+.Diagnose {
+  display: flex;
+  justify-content: center;
 }

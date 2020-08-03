@@ -1,158 +1,158 @@
 [
   {
     "name": "Erlotynib / gefitynib / afatynib w II linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "TAK",
+    "mutacja_aktywujaca_EFGR": true,
     "zaawansowanie": ["III", "IV"],
-    "zmiany_mierzalne": "TAK",
-    "brak_przerzutow_OUN": "TAK",
+    "zmiany_mierzalne": true,
+    "brak_przerzutow_OUN": true,
     "stopien_sprawnosci": [0, 1, 2],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": "TAK",
-    "wykluczenie_przeciwwskazan": "TAK"
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
+    "wykluczenie_przeciwwskazan": true
   },
   {
     "name": "Erlotynib / gefitynib / afatynib w I linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "TAK",
+    "mutacja_aktywujaca_EFGR": true,
     "zaawansowanie": ["III", "IV"],
-    "zmiany_mierzalne": "TAK",
-    "brak_przerzutow_OUN": "TAK",
+    "zmiany_mierzalne": true,
+    "brak_przerzutow_OUN": true,
     "stopien_sprawnosci": [0, 1, 2],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": "NIE",
-    "wykluczenie_przeciwwskazan": "TAK"
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": false,
+    "wykluczenie_przeciwwskazan": true
   },
   {
     "name": "ozymertynib w II linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "TAK",
-    "progresja_po_leczeniu_innym_inhibitorem_EFGR": "TAK",
-    "mutacja_T790 w genie EGFR": "TAK",
-    "wykluczenie_przeciwwskazan": "TAK",
-    "stan_sprawnosci": [0, 1, 2]
+    "mutacja_aktywujaca_EFGR": true,
+    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
+    "mutacja_T790_w_genie_EGFR": true,
+    "wykluczenie_przeciwwskazan": true,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Kryzotynib w I linii",
-    "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "rozpoznanie": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": "NIE",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Kryzotynib w II linii",
-    "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "rozpoznanie": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": "TAK",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": true,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Alektynib w I linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": "NIE",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Alektynib w II linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_kryzotynibem": "TAK",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_kryzotynibem": true,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Cerytynib w I linii",
-    "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "rozpoznanie": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": "NIE",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Cerytynib w II linii",
-    "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "TAK",
+    "rozpoznanie": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_kryzotynibem": "NIE",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_kryzotynibem": false,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Nintedanib w II linii",
-    "rozpozn_hist": ["rak gruczołowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "NIE",
+    "rozpoznanie": ["rak gruczołowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": "TAK",
-    "stan_sprawnosci": [0, 1, 2]
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
+    "stopien_sprawnosci": [0, 1, 2]
   },
   {
     "name": "Pembrolizumab w I linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
     "obecnosc_ekspresji_PD_L1": ">=50%",
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "NIE",
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["IV"],
-    "stan_sprawnosci": [0, 1]
+    "stopien_sprawnosci": [0, 1]
   },
   {
     "name": "Niwolumab  w II linii",
-    "rozpozn_hist": [
+    "rozpoznanie": [
       "rak gruczołowy",
       "rak wielkokomórkowy",
       "niedrobnokomórkowy NOS"
     ],
-    "mutacja_aktywujaca_EFGR": "NIE",
+    "mutacja_aktywujaca_EFGR": false,
     "zaawansowanie": ["III", "IV"],
-    "stan_sprawnosci": [0, 1],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": "TAK"
+    "stopien_sprawnosci": [0, 1],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
   },
   {
     "name": "Atezolizumab w II linii",
-    "rozpozn_hist": ["rak płasnonabłonkowy"],
-    "mutacja_aktywujaca_EFGR": "NIE",
-    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": "NIE",
+    "rozpoznanie": ["rak płasnonabłonkowy"],
+    "mutacja_aktywujaca_EFGR": false,
+    "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
-    "stan_sprawnosci": [0, 1],
-    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": "TAK"
+    "stopien_sprawnosci": [0, 1],
+    "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
   },
   {
     "name": "test",
-    "rozpozn_hist": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
-    "mutacja_aktywujaca_EFGR": "TAK",
-    "progresja_po_leczeniu_innym_inhibitorem_EFGR": "TAK",
-    "mutacja_T790 w genie EGFR": "TAK",
-    "wykluczenie_przeciwwskazan": "TAK"
+    "rozpoznanie": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
+    "mutacja_aktywujaca_EFGR": true,
+    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
+    "mutacja_T790_w_genie_EGFR": true,
+    "wykluczenie_przeciwwskazan": true
   }
 ]

@@ -8,7 +8,9 @@ import {
 } from "reactstrap";
 import ParamList from "../parameters.json";
 import { API } from "./api-service";
+import Dane from "../dane.json";
 
+const dane = Dane;
 const cloneParamList = Object.assign({}, ParamList);
 const clearParamList = (ParamList) => {
   Object.keys(ParamList).forEach(function (key) {
@@ -20,7 +22,12 @@ const clearParamList = (ParamList) => {
 //console.log(cloneParamList);
 
 const AddMedicine = () => {
-  //useEffect(() => console.log(ParamList));
+  useEffect(() => {
+    Dane.map((lek) => {
+      //API.addNewMedicine(lek).then((resp) => console.log(resp));
+      console.log("lek", lek);
+    });
+  });
 
   const [name, setName] = useState("");
   const [rozpoznanie, setRozpoznanie] = useState([]);

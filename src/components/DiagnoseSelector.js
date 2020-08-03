@@ -48,13 +48,17 @@ const DiagnoseSelector = (props) => {
               </DropdownToggle>
               <DropdownMenu>
                 {param[1].map((el) => {
+                  let data = "";
+                  if (typeof el === "boolean")
+                    el ? (data = "TAK") : (data = "NIE");
+                  else data = el;
                   return (
                     <DropdownItem
                       id={param[0]}
                       value={el}
                       onClick={changeParams}
                     >
-                      {el}
+                      {data}
                     </DropdownItem>
                   );
                 })}

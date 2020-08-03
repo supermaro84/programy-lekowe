@@ -23,7 +23,11 @@ const ModalExample = (props) => {
           </ol>
           <ol>
             {values.map((value) => {
-              return <li>{value}</li>;
+              let data = "";
+              if (typeof value === "boolean")
+                value ? (data = "TAK") : (data = "NIE");
+              else data = value;
+              return <li>{data}</li>;
             })}
           </ol>
         </ModalBody>
