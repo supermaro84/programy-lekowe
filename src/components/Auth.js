@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { API } from "../components/api-service";
 import { TokenContext } from "../routers/AppRouter";
 import { useCookies } from "react-cookie";
+import CircularProgress from "@material-ui/core/CircularProgress";
 const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -9,17 +10,26 @@ const Auth = () => {
 
   const [token, setToken] = useCookies(["pl-token"]);
   const [authUsername, setAuthUsername] = useCookies(["username"]);
+  const [spinner, setSpinner] = useState(false);
 
   useEffect(() => {
     console.log(token);
     if (token["pl-token"]) window.location.href = "/dashboard";
   }, [token]);
 
+  useEffect(() => {
+    setSpinner(false);
+  }, []);
+
   const loginClicked = () => {
+    console.log("start spinner");
+    setSpinner(true);
     API.loginUser({ username, password })
       .then((resp) => {
-        if (resp.token === undefined) alert("Nieudana próba logowania");
-        else {
+        if (resp.token === undefined) {
+          alert("Nieudana próba logowania");
+          setSpinner(false);
+        } else {
           setToken("pl-token", resp.token);
           setAuthUsername("username", resp.name);
         }
@@ -65,7 +75,7 @@ const Auth = () => {
           Rejestracja
         </button>
       )}
-
+      {spinner ? <CircularProgress /> : ""}
       {isLoginView ? (
         <h3>
           Nie posiadasz konta?{" "}
