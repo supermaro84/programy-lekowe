@@ -63,7 +63,7 @@ const DiagnoseSelector = (props) => {
                   );
                 })}
               </DropdownMenu>
-              {medParams[param[0]]}
+              <div className="selectedElement">{medParams[param[0]]}</div>
             </UncontrolledDropdown>
           );
         })}

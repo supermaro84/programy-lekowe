@@ -1,8 +1,30 @@
-const TOKEN = "5e46449a2bb90a1d86f07d9d57d15c9cd98c3bdd";
+import { useCookies } from "react-cookie";
+
+const TOKEN = "60664998609baa5ac1b9f447ba6c5e9791b8432e";
 
 export class API {
+  static loginUser(body) {
+    return fetch("https://programy-lekowe-api.herokuapp.com/auth/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }).then((resp) => resp.json());
+  }
+
+  static registerUser(body) {
+    return fetch("https://programy-lekowe-api.herokuapp.com/api/users/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }).then((resp) => this.loginUser);
+  }
+
   static addNewMedicine(body) {
-    return fetch("http://localhost:8000/api/therapies/", {
+    return fetch("https://programy-lekowe-api.herokuapp.com/api/therapies/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -10,7 +32,10 @@ export class API {
       },
       body: JSON.stringify(body),
     })
-      .then((resp) => resp.json())
+      .then((resp) => {
+        resp.json();
+        //console.log(resp);
+      })
       .then((resp) => console.log(resp));
   }
 }

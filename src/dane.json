@@ -10,7 +10,7 @@
     "zaawansowanie": ["III", "IV"],
     "zmiany_mierzalne": true,
     "brak_przerzutow_OUN": true,
-    "stopien_sprawnosci": [0, 1, 2],
+    "stopien_sprawnosci": ["0", "1", "2"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
     "wykluczenie_przeciwwskazan": true
   },
@@ -25,7 +25,7 @@
     "zaawansowanie": ["III", "IV"],
     "zmiany_mierzalne": true,
     "brak_przerzutow_OUN": true,
-    "stopien_sprawnosci": [0, 1, 2],
+    "stopien_sprawnosci": ["0", "1", "2"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": false,
     "wykluczenie_przeciwwskazan": true
   },
@@ -40,7 +40,7 @@
     "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
     "mutacja_T790_w_genie_EGFR": true,
     "wykluczenie_przeciwwskazan": true,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Kryzotynib w I linii",
@@ -49,7 +49,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Kryzotynib w II linii",
@@ -58,7 +58,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": true,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Alektynib w I linii",
@@ -71,7 +71,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Alektynib w II linii",
@@ -84,7 +84,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_kryzotynibem": true,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Cerytynib w I linii",
@@ -93,7 +93,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca_incl_anty_ALK": false,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Cerytynib w II linii",
@@ -102,7 +102,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": true,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_kryzotynibem": false,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Nintedanib w II linii",
@@ -111,7 +111,7 @@
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true,
-    "stopien_sprawnosci": [0, 1, 2]
+    "stopien_sprawnosci": ["0", "1", "2"]
   },
   {
     "name": "Pembrolizumab w I linii",
@@ -124,7 +124,7 @@
     "mutacja_aktywujaca_EFGR": false,
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["IV"],
-    "stopien_sprawnosci": [0, 1]
+    "stopien_sprawnosci": ["0", "1"]
   },
   {
     "name": "Niwolumab  w II linii",
@@ -135,7 +135,7 @@
     ],
     "mutacja_aktywujaca_EFGR": false,
     "zaawansowanie": ["III", "IV"],
-    "stopien_sprawnosci": [0, 1],
+    "stopien_sprawnosci": ["0", "1"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
   },
   {
@@ -144,15 +144,7 @@
     "mutacja_aktywujaca_EFGR": false,
     "Obecnosc_rearanzacji_w_genie_ALK_lub_ROS1": false,
     "zaawansowanie": ["III", "IV"],
-    "stopien_sprawnosci": [0, 1],
+    "stopien_sprawnosci": ["0", "1"],
     "wczesniejsze_leczenie_systemowe_zp_raka_pluca": true
-  },
-  {
-    "name": "test",
-    "rozpoznanie": ["rak płasnonabłonkowy", "niedrobnokomórkowy NOS"],
-    "mutacja_aktywujaca_EFGR": true,
-    "progresja_po_leczeniu_innym_inhibitorem_EFGR": true,
-    "mutacja_T790_w_genie_EGFR": true,
-    "wykluczenie_przeciwwskazan": true
   }
 ]

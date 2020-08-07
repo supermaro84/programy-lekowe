@@ -1,11 +1,20 @@
 import React, { useState, useEffect, Component } from "react";
 import Dane from "../dane2.json";
 import MedicineModal from "../components/MedicineModal";
+import { useCookies } from "react-cookie";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import { FixedSizeList } from "react-window";
+import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "reactstrap";
 
 const Diagnose = (props) => {
   //const dane = Dane;
-  const [dane, setDane] = useState(Dane);
+  const [dane, setDane] = useState([]);
   const [daneF, setDaneF] = useState([]);
+  const [token] = useCookies(["pl-token"]);
 
   useEffect(() => {
     if (props.newParamList) {
@@ -15,21 +24,22 @@ const Diagnose = (props) => {
     }
   }, [props.newParamList]);
 
-  // useEffect(() => {
-  //   fetch("http://127.0.0.1:8000/api/therapies", {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: "Token 5e46449a2bb90a1d86f07d9d57d15c9cd98c3bdd",
-  //     },
-  //   })
-  //     .then((resp) => resp.json())
-  //     .then((json) => {
-  //       setDane(json);
-  //       setDaneF(json);
-  //     })
-  //     .catch((error) => console.log(error));
-  // }, []);
+  useEffect(() => {
+    console.log("fetching data from django api");
+    fetch("https://programy-lekowe-api.herokuapp.com/api/therapies", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token["pl-token"]}`,
+      },
+    })
+      .then((resp) => resp.json())
+      .then((json) => {
+        setDane(json);
+        setDaneF(json);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
   const getScores = () => {
     const paramsToScore = props.newParamList;
@@ -346,25 +356,30 @@ const Diagnose = (props) => {
   };
 
   return (
-    <div>
+    <div className="Diagnoza">
       <h1>Diagnoza</h1>
-      <ol>
+
+      <List className="lista-lekow" subheader={<li />}>
         {daneF.map((lek) => {
           const keysMeds = Object.keys(lek).map((e) => e);
           const valsMeds = Object.values(lek).map((e) => e);
 
           return (
             <li>
-              <MedicineModal
-                buttonLabel={lek.name}
-                properties={keysMeds}
-                values={valsMeds}
-                className="MedModal"
-              />
+              <ul>
+                <ListItem>
+                  <MedicineModal
+                    buttonLabel={lek.name}
+                    properties={keysMeds}
+                    values={valsMeds}
+                    className="MedModal"
+                  />
+                </ListItem>
+              </ul>
             </li>
           );
         })}
-      </ol>
+      </List>
     </div>
   );
 };

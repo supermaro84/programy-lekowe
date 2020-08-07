@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: white;
 }
 
 .App-logo {
@@ -36,9 +38,6 @@
     transform: rotate(360deg);
   }
 }
-.selection_box {
-  background-color: aquamarine;
-}
 
 ol {
   width: 400pt;
@@ -56,4 +55,53 @@ ol {
 .Diagnose {
   display: flex;
   justify-content: center;
+}
+.userIcon {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.dropdown-toggle {
+  display: inline;
+  color: black;
+}
+
+.btn-secondary {
+  float: left;
+  width: 80%;
+  padding: 4px;
+  margin: 3px;
+  font-size: 20px;
+  background-color: aquamarine;
+}
+
+.selectedElement {
+  float: left;
+  display: inline;
+  width: 15%;
+  padding: 4px;
+  margin: 2px;
+  font-size: 20px;
+}
+.selection_box {
+  background-color: black;
+}
+
+.lista-lekow {
+  max-width: 100%;
+  position: relative;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.lek-modal-button {
+  background-color: rebeccapurple;
+  width: 100%;
+  min-width: 100%;
+  padding: 5px;
+  margin: 1px;
+}
+.nav-button {
+  margin: 2px;
 }

@@ -9,8 +9,8 @@ const ModalExample = (props) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <div>
-      <Button color="danger" onClick={toggle}>
+    <React.Fragment>
+      <Button className="lek-modal-button" onClick={toggle}>
         {buttonLabel}
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
@@ -33,7 +33,7 @@ const ModalExample = (props) => {
         </ModalBody>
         <ModalFooter></ModalFooter>
       </Modal>
-    </div>
+    </React.Fragment>
   );
 };
 
